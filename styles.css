@@ -149,6 +149,13 @@ h1::selection {
   animation-play-state: paused;
 }
 
+.buttonAnimation:hover::before {
+  animation-play-state: paused;
+}
+
+#alien {
+}
+
 @keyframes rotate {
   100% {
     transform: rotate(-360deg);
