@@ -115,5 +115,42 @@ h1 {
   width: 50px;
 }
 
-.body {
+h1::selection {
+  color: white;
+  background-color: black;
+}
+
+.buttonAnimation {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 180px;
+  transform-origin: 200% center;
+  position: relative;
+  animation: rotate 3s linear infinite;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  left: -170px;
+  background-color: blue;
+}
+.buttonAnimation::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 80%;
+  border-radius: 50%;
+  background: turquoise;
+  animation: rotate 3s linear reverse infinite;
+  opacity: 0.9;
+}
+
+.buttonAnimation:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
 }
